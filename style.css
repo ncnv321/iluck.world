@@ -61,7 +61,7 @@
       }
    
       body{
-        background: url("https://lluck.neocities.org/background2.png");
+        background: url("/background2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
