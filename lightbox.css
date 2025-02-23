@@ -1,0 +1,130 @@
+#lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999999;
+  line-height: 0;
+  cursor: pointer;
+  display: none;
+  padding: 2em 6px;
+}
+#lightbox .img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+#lightbox figcaption {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+}
+#lightbox .img img {
+  opacity: 0;
+  pointer-events: none;
+  width: auto;
+}
+
+#lightbox span {
+  display: block;
+  position: fixed;
+  bottom: 13px;
+
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+#lightbox span {
+  display: none;
+}
+
+#lightbox .videoWrapperContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+#lightbox .videoWrapperContainer .videoWrapper {
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-bottom: 56.333%; /* custom */
+}
+#lightbox .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+#lightbox #prev,
+#lightbox #next {
+  height: 50px;
+  display: none;
+  margin-top: -25px;
+  position: fixed;
+  top: 50%;
+  padding: 0 15px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 99;
+  color: white;
+}
+#lightbox.gallery #prev,
+#lightbox.gallery #next {
+  display: block;
+}
+#lightbox #prev {
+  left: 6px;
+}
+#lightbox #next {
+  right: 6px;
+}
+#lightbox #prev::after,
+#lightbox #prev::before,
+#lightbox #next::after,
+#lightbox #next::before {
+  content: "";
+}
+#lightbox #close {
+  height: 24px;
+  width: 24px;
+  top: 0;
+  left: 6px;
+  position: fixed;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 99;
+}
+#lightbox #close::before {
+  content: "[X]";
+}
+#lightbox #close::after {
+  content: "";
+}
+#lightbox,
+#lightbox * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
